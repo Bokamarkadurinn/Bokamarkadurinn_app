@@ -9,4 +9,3 @@ features
 - skráning inn í database
 - admin input
 - auto calculator for price
-- 
