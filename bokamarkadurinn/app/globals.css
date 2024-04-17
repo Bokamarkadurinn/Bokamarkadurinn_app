@@ -18,16 +18,34 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(41, 41, 41);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+header {
+  background-color: rgba(0, 0, 0, 0.24);
+  display: block;
+  padding: 15px;
+}
+
+main {
+  margin: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+  main {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 5px;
+  }
+  main {
+    margin: 2px;
   }
 }
