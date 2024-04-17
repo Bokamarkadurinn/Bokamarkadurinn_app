@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <h1>Forsíða</h1>
+    <h1>Um okkur</h1>
   );
 }

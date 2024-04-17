@@ -1,5 +1,5 @@
 export default function Page() {
     return (
-        <h1>Prófílssíða</h1>
+        <h1>Námsgreinarsíða</h1>
     );
 }
