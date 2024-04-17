@@ -1,7 +1,5 @@
 export default function Page() {
     return (
-        <main>
-            <h1>Innskráning</h1>
-        </main>
+        <h1>Innskráningarsíða</h1>
     );
 }
