@@ -1,18 +1,20 @@
-export default function RootLayout({
-  children, // will be a page or nested layout
-}: {
-  children: React.ReactNode
-}) {
-return (
+import React from 'react';
+import Menu from '@/app/ui/menu';
+import '@/app/globals.css'
+
+
+export default function RootLayout({children,}: {children: React.ReactNode}) 
+{
+
+  return (
   <html lang="is">
-    <body>
-      <header></header>
-      <nav></nav>
-      <main>
-        {children}
-      </main>
-      <footer></footer>
-    </body>
+      <body>
+        <header>
+          <Menu />
+        </header>
+        <main>{children}</main>
+        <footer></footer>
+      </body>
   </html>
 );
 }
