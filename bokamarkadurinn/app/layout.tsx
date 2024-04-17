@@ -8,7 +8,9 @@ return (
     <body>
       <header></header>
       <nav></nav>
-      <main></main>
+      <main>
+        {children}
+      </main>
       <footer></footer>
     </body>
   </html>
