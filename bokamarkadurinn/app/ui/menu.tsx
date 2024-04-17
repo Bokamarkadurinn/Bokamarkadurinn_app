@@ -39,11 +39,6 @@ const Menu: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/forsida">
-                  <button onClick={closeMenu}>Forsíða</button>
-                </Link>
-              </li>
-              <li>
                 <Link href="/innskraning">
                   <button onClick={closeMenu}>Innskráning</button>
                 </Link>
