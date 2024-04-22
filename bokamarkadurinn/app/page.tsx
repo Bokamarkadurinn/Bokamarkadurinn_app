@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Page() {
     return (
         <main id="forsida">
-            <h1 id="head">Forsíða</h1>
+            <h1 id="head">Bókamarkaðurinn</h1>
             <nav className="menu-nav">
           <ul>
                 <li>
@@ -41,9 +41,11 @@ export default function Page() {
               text-align: center;
               color: white;
               padding: 15px;
-              font-size: 80px;
-          }
-          button {
+              font-size: 250%;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: bold;
+            }
+            button {
             padding: 12px 28px;
             border-radius: 20px;
             display: block;
@@ -60,49 +62,73 @@ export default function Page() {
             -webkit-user-select: none;
             touch-action: manipulation;
             cursor: pointer;
-            font-family: "Times New Roman", Times, serif;
-            font-size: 16px;
-            width: 20%;
-        }
-        button:hover {
-          background-color: white;
-          color: black;
-          transform: scale(1.125);
-        }
-        
-        button:active {
-        transform: scale(1.025);
-        }
-        
-        @media (min-width: 768px) {
-        button {
-          font-size: 1.5rem;
-          padding: .75rem 2rem;
-        }
-        }
-        .menu-nav ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        .menu-nav ul li {
-          margin-bottom: 15px;
-        }
-
-        @media screen and (max-width: 768px) {
-          .menu-nav ul li button {
-            width: 200px;
-            font-size: 16px;
-          }
-        }
-      
-        @media screen and (max-width: 480px) {
-          .menu-nav ul li button {
-            width: 150px;
-            font-size: 14px;
-          }
-        }
+            font-size: 200%;
+            width: 90%;
+            padding: 200%;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+            button:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.125);
+            }
+            
+            button:active {
+            transform: scale(1.025);
+            }
+            
+            @media (min-width: 768px) {
+            button {
+            font-size: 1.5rem;
+            padding: .75rem 2rem;
+            }
+            }
+            .menu-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+            
+            .menu-nav ul li {
+            margin-bottom: 15px;
+            }
+            
+            @media screen and (max-height: 1025px) {
+            .menu-nav ul li button {
+            width: 90%;
+            padding: 7%;
+            font-size: 200%;
+            }
+            }
+            @media screen and (max-width: 767px) {
+            .menu-nav ul li button {
+            width: 90%;
+            padding: 10%;
+            font-size: 200%;
+            }
+            }
+            
+            @media screen and (max-width: 480px) {
+            .menu-nav ul li button {
+            width: 90%;
+            padding: 8%;
+            font-size: 200%;
+            }
+            }
+            @media screen and (max-height: 741px) {
+            .menu-nav ul li button {
+            width: 90%;
+            padding: 5%;
+            font-size: 200%;
+            }
+            }
+            @media screen and (max-height: 670px) {
+            .menu-nav ul li button {
+            width: 90%;
+            padding: 4%;
+            font-size: 200%;
+            }
+            }
 `}</style>
         </main>
     );
