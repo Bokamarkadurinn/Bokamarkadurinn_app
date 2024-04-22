@@ -61,8 +61,9 @@ export default function Page() {
             touch-action: manipulation;
             cursor: pointer;
             font-family: "Times New Roman", Times, serif;
-            font-size: 16px;
-            width: 20%;
+            font-size: 300%;
+            width: 70%;
+            padding: 2000%;
         }
         button:hover {
           background-color: white;
@@ -90,17 +91,40 @@ export default function Page() {
           margin-bottom: 15px;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-height: 1025px) {
           .menu-nav ul li button {
-            width: 200px;
-            font-size: 16px;
+            width: 70%;
+            padding: 7%;
+            font-size: 200%;
+          }
+        }
+        @media screen and (max-width: 767px) {
+          .menu-nav ul li button {
+            width: 80%;
+            padding: 10%;
+            font-size: 200%;
           }
         }
       
         @media screen and (max-width: 480px) {
           .menu-nav ul li button {
-            width: 150px;
-            font-size: 14px;
+            width: 70%;
+            padding: 8%;
+            font-size: 200%;
+          }
+        }
+        @media screen and (max-height: 741px) {
+          .menu-nav ul li button {
+            width: 70%;
+            padding: 5%;
+            font-size: 200%;
+          }
+        }
+        @media screen and (max-height: 670px) {
+          .menu-nav ul li button {
+            width: 70%;
+            padding: 4%;
+            font-size: 200%;
           }
         }
 `}</style>
