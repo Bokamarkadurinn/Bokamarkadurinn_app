@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Page() {
     return (
         <main id="forsida">
-            <h1 id="head">Forsíða</h1>
+            <h1 id="head">Bókamarkaðurinn</h1>
             <nav className="menu-nav">
           <ul>
                 <li>
@@ -41,7 +41,7 @@ export default function Page() {
               text-align: center;
               color: white;
               padding: 15px;
-              font-size: 80px;
+              font-size: 250%;
               font-family: Arial, Helvetica, sans-serif;
               font-weight: bold;
             }
@@ -62,9 +62,9 @@ export default function Page() {
             -webkit-user-select: none;
             touch-action: manipulation;
             cursor: pointer;
-            font-size: 300%;
-            width: 70%;
-            padding: 2000%;
+            font-size: 200%;
+            width: 90%;
+            padding: 200%;
             font-family: Arial, Helvetica, sans-serif;
             }
             button:hover {
@@ -95,14 +95,14 @@ export default function Page() {
             
             @media screen and (max-height: 1025px) {
             .menu-nav ul li button {
-            width: 70%;
+            width: 90%;
             padding: 7%;
             font-size: 200%;
             }
             }
             @media screen and (max-width: 767px) {
             .menu-nav ul li button {
-            width: 80%;
+            width: 90%;
             padding: 10%;
             font-size: 200%;
             }
@@ -110,21 +110,21 @@ export default function Page() {
             
             @media screen and (max-width: 480px) {
             .menu-nav ul li button {
-            width: 70%;
+            width: 90%;
             padding: 8%;
             font-size: 200%;
             }
             }
             @media screen and (max-height: 741px) {
             .menu-nav ul li button {
-            width: 70%;
+            width: 90%;
             padding: 5%;
             font-size: 200%;
             }
             }
             @media screen and (max-height: 670px) {
             .menu-nav ul li button {
-            width: 70%;
+            width: 90%;
             padding: 4%;
             font-size: 200%;
             }
