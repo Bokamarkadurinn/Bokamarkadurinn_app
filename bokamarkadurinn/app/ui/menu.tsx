@@ -51,6 +51,11 @@ const Menu: React.FC = () => {
                   <button onClick={closeMenu}>Profill</button>
                 </Link>
               </li>
+              <li>
+                <Link href="/um_okkur">
+                  <button onClick={closeMenu}>Um Okkur</button>
+                </Link>
+              </li>
             </ul>
           </nav>
           <div className="close-button" onClick={toggleMenu}>
