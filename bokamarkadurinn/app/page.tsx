@@ -10,27 +10,27 @@ export default function Page() {
             <nav className="menu-nav">
           <ul>
                 <li>
-                  <Link href="/namsgrein/staerdfraedi">
+                  <Link href="/staerdfraedi">
                     <button>Stærfræði</button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/namsgrein/islenska">
+                  <Link href="/islenska">
                     <button>Íslenska</button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/namsgrein/enska">
+                  <Link href="/enska">
                     <button>Enska</button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/namsgrein/danska">
+                  <Link href="/danska">
                     <button>Danska</button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/namsgrein/annad">
+                  <Link href="/annad">
                     <button>Annað</button>
                   </Link>
                 </li>
