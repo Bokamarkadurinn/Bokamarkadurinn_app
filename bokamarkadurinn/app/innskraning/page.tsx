@@ -23,7 +23,7 @@ export default function Page() {
 
                 <p id='adgang'>
                     <span>Ekki með aðgang? <br /></span>
-                    <span> <a href="#">Nýskráðu</a> þig</span>
+                    <span> <a href="./nyskraning">Nýskráðu</a> þig</span>
                 </p>
             </div>
         </main>
