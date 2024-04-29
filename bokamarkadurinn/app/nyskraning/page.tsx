@@ -1,9 +1,15 @@
 "use client"
-import { signIn } from "next-auth/react";
+import validator from 'validator';
 import './nyskra.css';
 import React, { useState } from 'react';
 
 export default function Page() {
+    /*
+    const handleLoginWithGoogle = async () => {
+        await signIn("google");
+        return;
+      }
+      */
     const [input, setInput] = useState({
         gmail: '',
         uname: '',
@@ -17,16 +23,27 @@ export default function Page() {
         psw: '',
         cpsw: ''
       })
-     
+      
       const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setInput(prev => ({
-          ...prev,
-          [name]: value
+            ...prev,
+            [name]: value
         }));
-        validateInput(e);
-      }
-      
+        if (name === 'gmail') {
+            validateEmail(value);
+        } else {
+            validateInput(e);
+        }
+    };
+
+    const validateEmail = (value: string) => {
+        if (!validator.isEmail(value)) {
+            setError(prev => ({ ...prev, gmail: 'Email-ið er rangt dæmi um email: dæmi@dæmi.com' }));
+        } else {
+            setError(prev => ({ ...prev, gmail: '' }));
+        }
+    };
      
       const validateInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         let { name, value } = e.target;
@@ -84,10 +101,11 @@ export default function Page() {
                     <input
                     type="email"
                     name="gmail"
-                    placeholder='Skráðu Notandanafnið'
+                    placeholder='Skráðu email'
                     value={input.gmail}
                     onChange={onInputChange}
-                    onBlur={validateInput}></input>
+                    onBlur={() => validateEmail(input.gmail)} // Call validateEmail on blur
+                    />
                     {error.gmail && <span className='err'>{error.gmail}</span>}
                 </p>
 
@@ -128,6 +146,8 @@ export default function Page() {
                 </p>
 
                 <button type="submit">Stofna</button>
+
+                {/*<button onClick={handleLoginWithGoogle}>Nýskrá með google</button> # google login */}
             </div>
         </main>
     );
