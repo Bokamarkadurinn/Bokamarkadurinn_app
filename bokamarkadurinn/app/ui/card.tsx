@@ -13,6 +13,7 @@ interface Event {
 const Card: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false);
 
   useEffect(() => {
     fetch('/vidburdir.json')
@@ -36,6 +37,20 @@ const Card: React.FC = () => {
 
   const closeModal = () => {
     setSelectedEvent(null);
+  };
+
+  const handleBuyClick = () => {
+    setShowConfirmationModal(true);
+  };
+
+  const handleConfirm = () => {
+    // Handle confirmation logic here (e.g., proceed with purchase)
+    console.log("Confirmed");
+    setShowConfirmationModal(false);
+  };
+
+  const handleCancel = () => {
+    setShowConfirmationModal(false);
   };
 
   return (
@@ -68,14 +83,25 @@ const Card: React.FC = () => {
                 <p>Date: {selectedEvent.dagsetning}</p>
                 <p>Price: {selectedEvent.verd}</p>
                 <p>Description: {selectedEvent.lysing}</p>
-                <Link href="/namsgrein/staerdfraedi">
-                  <button className="buy-button" onClick={closeModal}>Kaupa</button>
-                </Link>
+                <button className="buy-button" onClick={handleBuyClick}>Kaupa</button>
               </div>
             </div>
           </div>
         </div>
       )}
+
+      {showConfirmationModal && (
+        <div className="confirmation-modal">
+          <div className="confirmation-modal-content">
+            <p>Are you sure you want to proceed with the purchase?</p>
+            <div className="confirmation-buttons">
+              <button className="confirm-button" onClick={handleConfirm}>Confirm</button>
+              <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+            </div>
+          </div>
+        </div>
+      )}
+
 
       <style jsx>{`
         /* Card Container */
@@ -193,6 +219,51 @@ const Card: React.FC = () => {
         .modal-text {
           width: 60%;
           padding: 0 10px;
+        }
+        /* Confirmation Modal */
+        .confirmation-modal {
+          position: fixed;
+          z-index: 10;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+        }
+      
+        .confirmation-modal-content {
+          text-align: center;
+        }
+      
+        .confirmation-buttons {
+          margin-top: 20px;
+        }
+      
+        .confirm-button,
+        .cancel-button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      
+        .confirm-button {
+          background-color: #4CAF50;
+          color: #fff;
+        }
+      
+        .cancel-button {
+          background-color: #f44336;
+          color: #fff;
+          margin-left: 10px;
+        }
+      
+        .confirm-button:hover,
+        .cancel-button:hover {
+          opacity: 0.8;
         }
       `}</style>
     </div>
