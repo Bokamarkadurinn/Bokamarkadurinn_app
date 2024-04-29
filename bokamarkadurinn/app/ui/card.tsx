@@ -83,7 +83,7 @@ const Card: React.FC = () => {
                 <p>Date: {selectedEvent.dagsetning}</p>
                 <p>Price: {selectedEvent.verd}</p>
                 <p>Description: {selectedEvent.lysing}</p>
-                <button className="buy-button" onClick={handleBuyClick}>Kaupa</button>
+                <button className="buy-button" onClick={handleBuyClick}>Frátaka</button>
               </div>
             </div>
           </div>
@@ -93,10 +93,12 @@ const Card: React.FC = () => {
       {showConfirmationModal && (
         <div className="confirmation-modal">
           <div className="confirmation-modal-content">
-            <p>Are you sure you want to proceed with the purchase?</p>
+            <h1>Viltu taka frá þessa bók?</h1>
+            <p>ATH!</p>
+            <p>Bækur fara aftur í safn eftir 3 daga</p>
             <div className="confirmation-buttons">
-              <button className="confirm-button" onClick={handleConfirm}>Confirm</button>
-              <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+              <button className="confirm-button" onClick={handleConfirm}>Já</button>
+              <button className="cancel-button" onClick={handleCancel}>Nei</button>
             </div>
           </div>
         </div>
@@ -130,6 +132,7 @@ const Card: React.FC = () => {
         .card-content {
           display: flex;
         }
+        
 
         .card-image {
           width: 40%;
@@ -162,7 +165,7 @@ const Card: React.FC = () => {
 
         /* Modal Content */
         .buy-button {
-          background-color: purple;
+          background-color: orange;
           color: white;
           padding: 10px 20px;
           font-size: 18px;
@@ -173,7 +176,7 @@ const Card: React.FC = () => {
         }
         
         .buy-button:hover {
-          background-color: pink;
+          background-color: yellow;
         }
 
         .modal-content {
@@ -226,6 +229,7 @@ const Card: React.FC = () => {
           z-index: 10;
           left: 50%;
           top: 50%;
+          color:black;
           transform: translate(-50%, -50%);
           background-color: #fff;
           border-radius: 8px;
