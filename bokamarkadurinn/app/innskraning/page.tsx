@@ -4,6 +4,7 @@ import './innskra.css';
 export default function Page() {
     return (
         <main>
+            <title>Innskráning</title>
             <h1 id="innskraning">Innskráning</h1>
 
             <div id="container">

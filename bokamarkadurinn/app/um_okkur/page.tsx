@@ -3,6 +3,7 @@ import './um-okkur.css';
 export default function Home() {
   return (
     <main id='um-okkur'>
+      <title>Um okkur</title>
       <h1 id="head">Um okkur</h1>
       <div id='texti'>
         Við erum hópur af strákum sem er að gera þetta sem verkefni í vefforitun.
