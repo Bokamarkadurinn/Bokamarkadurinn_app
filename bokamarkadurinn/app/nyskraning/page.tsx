@@ -11,14 +11,14 @@ export default function Page() {
       }
       */
     const [input, setInput] = useState({
-        gmail: '',
+        email: '',
         uname: '',
         psw: '',
         cpsw: ''
       });
      
       const [error, setError] = useState({
-        gmail: '',
+        email: '',
         uname: '',
         psw: '',
         cpsw: ''
@@ -30,7 +30,7 @@ export default function Page() {
             ...prev,
             [name]: value
         }));
-        if (name === 'gmail') {
+        if (name === 'email') {
             validateEmail(value);
         } else {
             validateInput(e);
@@ -39,9 +39,9 @@ export default function Page() {
 
     const validateEmail = (value: string) => {
         if (!validator.isEmail(value)) {
-            setError(prev => ({ ...prev, gmail: 'Email-ið er rangt dæmi um email: dæmi@dæmi.com' }));
+            setError(prev => ({ ...prev, email: 'Email-ið er rangt dæmi um email: dæmi@dæmi.com' }));
         } else {
-            setError(prev => ({ ...prev, gmail: '' }));
+            setError(prev => ({ ...prev, email: '' }));
         }
     };
      
@@ -51,11 +51,11 @@ export default function Page() {
           const stateObj = { ...prev, [name]: "" };
        
           switch (name) {
-            case "gmail":
+            case "email":
                 if (!value) {
-                    stateObj[name] = "Skrifaðu gmail-ið";
-                } else if (!input.gmail.includes("@") || !input.gmail.includes(".")) {
-                    stateObj[name] = "gmail-ið þarf að hafa @ og .";
+                    stateObj[name] = "Skrifaðu email-ið";
+                } else if (!input.email.includes("@") || !input.email.includes(".")) {
+                    stateObj[name] = "email-ið þarf að hafa @ og .";
                   }
                 break;
             case "uname":
@@ -101,16 +101,16 @@ export default function Page() {
             <div id="container">
 
                 <p>
-                    <label id='gmail'><b>Gmail</b></label>
+                    <label id='email'><b>Email</b></label>
                     <input
                     type="email"
-                    name="gmail"
+                    name="email"
                     placeholder='Skráðu email'
-                    value={input.gmail}
+                    value={input.email}
                     onChange={onInputChange}
-                    onBlur={() => validateEmail(input.gmail)} // Call validateEmail on blur
+                    onBlur={() => validateEmail(input.email)} // Call validateEmail on blur
                     />
-                    {error.gmail && <span className='err'>{error.gmail}</span>}
+                    {error.email && <span className='err'>{error.email}</span>}
                 </p>
 
                 <p>
