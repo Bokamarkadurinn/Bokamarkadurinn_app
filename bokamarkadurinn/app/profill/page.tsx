@@ -31,13 +31,7 @@ export default function Page() {
         if (fraBaekur.length === 0) {
             return "ekkert";
         } else {
-            return (
-                <select>
-                    {fraBaekur.map((item, index) => (
-                        <option key={index}>{item}</option>
-                    ))}
-                </select>
-            );
+            // Return other content if fraBaekur is not empty
         }
     }
 
@@ -47,13 +41,7 @@ export default function Page() {
         if (minarBaekur.length === 0) {
             return "ekkert";
         } else {
-            return (
-                <select>
-                    {minarBaekur.map((item, index) => (
-                        <option key={index}>{item}</option>
-                    ))}
-                </select>
-            );
+            // Return other content if minarBaekur is not empty
         }
     }
     const toggleFratOr = () => {
@@ -73,17 +61,17 @@ export default function Page() {
             <p id='dropdown' onClick={toggleFratOr}>
                 Fráteknar bækur {fratOr ? "↓" : "→"} <br></br>
                 {fratOr && (
-                    <select>
+                    <div>
                         {saekjaFraBaekur()}
-                    </select>
+                    </div>
                 )}
             </p>
             <p id='dropdown' onClick={toggleMinarOr}>
                 Mínar bækur {minarOr ? "↓" : "→"} <br></br>
                 {minarOr && (
-                    <select>
+                    <div>
                         {saekjaMinarBaekur()}
-                    </select>
+                    </div>
                 )}
             </p>
         </main>
