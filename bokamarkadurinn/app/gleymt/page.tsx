@@ -44,7 +44,7 @@ export default function Page() {
             <div id="container">
 
                 <p>
-                    <label id='email'><b>Gmail</b></label>
+                    <label id='email'><b>Email</b></label>
                     <input
                     type="email"
                     name="email"
