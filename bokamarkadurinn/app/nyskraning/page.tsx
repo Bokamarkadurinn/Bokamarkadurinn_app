@@ -66,13 +66,17 @@ export default function Page() {
        
             case "psw":
               if (!value) {
-                stateObj[name] = "Skráðu lykilorðið";
+                  stateObj[name] = "Skráðu lykilorðið";
+              } else if (value.length < 7) {
+                  stateObj[name] = "Lykilorðið verður að hafa að minnsta kosti 7 tölur eða stafi";
               } else if (input.cpsw && value !== input.cpsw) {
-                stateObj["cpsw"] = "lykilorðið og endurskráða lykilorðið eru ekki eins";
+                stateObj["cpsw"] = "Lykilorðið og endurskráða lykilorðið eru ekki eins";
               } else {
-                stateObj["cpsw"] = input.cpsw ? "" : error.cpsw;
+                  stateObj["cpsw"] = input.cpsw ? "" : error.cpsw;
               }
               break;
+            
+            
        
             case "cpsw":
               if (!value) {

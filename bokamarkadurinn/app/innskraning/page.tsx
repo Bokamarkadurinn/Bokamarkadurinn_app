@@ -17,7 +17,7 @@ export default function Page() {
                 <input type="password" placeholder="Skráðu Lykilorðið" name="psw" required></input>
                 </p>
 
-                <span id="forgot">Gleymt <a href="#">Lykilorð?</a></span>
+                <span id="forgot">Gleymt <a href="./gleymt">Lykilorð?</a></span>
 
                 <button type="submit">Skrá inn</button>
 
