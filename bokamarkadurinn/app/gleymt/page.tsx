@@ -39,6 +39,7 @@ export default function Page() {
 
     return (
         <main>
+            <title>Gleymt lykilorð</title>
             <h1 id="gleymt">Gleymt lykilorð</h1>
 
             <div id="container">

@@ -6,6 +6,7 @@ import Link from 'next/link';
 export default function Page() {
     return (
         <main id="forsida">
+          <title>Bókamarkaðurinn</title>
             <h1 id="head">Bókamarkaðurinn</h1>
             <nav className="menu-nav">
           <ul>
