@@ -161,6 +161,11 @@
   .cancel-button:hover {
     opacity: 0.8;
   }
+/* Filter Controls */
+.filter-controls {
+  margin-bottom: 20px;
+}
+
 /* Search Input */
 .filter-controls input[type="text"] {
   width: calc(100% - 20px); /* Adjust for padding */

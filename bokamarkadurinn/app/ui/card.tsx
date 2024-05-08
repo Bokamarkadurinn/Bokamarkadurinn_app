@@ -65,26 +65,26 @@ const Card: React.FC = () => {
     setShowConfirmationModal(false);
   };
 
-  // Handle filter type change
-  const handleFilterTypeChange = (type: string) => {
-    // If the clicked filter is already active, deselect it
-    if (filterTypes.includes(type)) {
-      setFilterTypes([]);
+// Handle filter type change
+const handleFilterTypeChange = (type: string) => {
+  // If the clicked filter is already active, deselect it
+  if (filterTypes.includes(type)) {
+    setFilterTypes([]);
+  } else {
+    // Deselect all filters and activate the clicked one
+    setFilterTypes([type]);
+  }
+
+  // Toggle active class for all filter buttons
+  const buttons = document.querySelectorAll('.filter-buttons button');
+  buttons.forEach(button => {
+    if (button.textContent === type) {
+      button.classList.toggle('active', filterTypes.includes(type)); // Add or remove 'active' class based on filterTypes
     } else {
-      // Deselect all filters and activate the clicked one
-      setFilterTypes([type]);
+      button.classList.remove('active');
     }
-    
-    // Toggle active class for all filter buttons
-    const buttons = document.querySelectorAll('.filter-buttons button');
-    buttons.forEach(button => {
-      if (button.textContent === type) {
-        button.classList.toggle('active');
-      } else {
-        button.classList.remove('active');
-      }
-    });
-  };
+  });
+};
 
   // Handle search input change
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
