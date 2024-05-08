@@ -112,8 +112,12 @@ const Card: React.FC = () => {
         <input type="text" placeholder="Search" value={searchQuery} onChange={handleSearchInputChange} />
         {/* Buttons for filter types */}
         <div className="filter-buttons">
-          <button onClick={() => handleFilterTypeChange("Filter 1")}>Filter 1</button>
-          <button onClick={() => handleFilterTypeChange("Filter 2")}>Filter 2</button>
+          <button onClick={() => handleFilterTypeChange("Filter 1")}>Stærfræði</button>
+          <button onClick={() => handleFilterTypeChange("Filter 2")}>Íslenska</button>
+          <button onClick={() => handleFilterTypeChange("Filter 3")}>Enska</button>
+          <button onClick={() => handleFilterTypeChange("Filter 4")}>Danska</button>
+         {/* Þarf að fara yfir getur ekki verið takki 
+         verður að vera drop down sennilega */} <button onClick={() => handleFilterTypeChange("Filter 5")}>Annað</button>
           {/* Add more buttons for additional filters */}
         </div>
       </div>

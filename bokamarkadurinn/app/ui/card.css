@@ -161,42 +161,41 @@
   .cancel-button:hover {
     opacity: 0.8;
   }
-  /* Filter Controls */
-  .filter-controls {
-    margin-bottom: 20px;
-  }
+/* Search Input */
+.filter-controls input[type="text"] {
+  width: calc(100% - 20px); /* Adjust for padding */
+  padding: 5px;
+  color: black;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-  /* Search Input */
-  .filter-controls input[type="text"] {
-    width: 200px;
-    padding: 5px;
-    color: black;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  /* Filter buttons */
-  .filter-buttons {
-    margin-top: 10px;
-  }
+/* Filter buttons */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-  .filter-buttons button {
-    background-color: orange;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
+.filter-buttons button {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
-  .filter-buttons button:hover {
-    background-color: rgb(224, 146, 0);
-  }
-  .filter-buttons button.active {
-    background-color: rgb(224, 146, 0); 
-  }
+.filter-buttons button:hover {
+  background-color: rgb(224, 146, 0);
+}
+
+.filter-buttons button.active {
+  background-color: rgb(224, 146, 0); 
+}
