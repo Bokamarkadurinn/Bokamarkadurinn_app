@@ -170,6 +170,7 @@
   .filter-controls input[type="text"] {
     width: 200px;
     padding: 5px;
+    color: black;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
