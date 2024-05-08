@@ -25,6 +25,14 @@ export default function Page() {
             return "Jón Jónsson";// þetta er bara til að testa, síðan ætti að fara á innskráningar síðuna ef það er ekkert notendarnafn
         }
     }
+    const saekjaID = () => {
+        const id = -1;
+        if (id != -1) {
+            return id;
+        } else {
+            return "XXXXX";
+        }
+    }
     const saekjaFraBaekur = () => {
         const fraBaekur: string[] = [];
 
@@ -57,6 +65,9 @@ export default function Page() {
             <img src={saekjaMynd()} id="mynd" />
             <p id='nafn'>
                 {saekjaNafn()}
+            </p>
+            <p id='identity'>
+                id: {saekjaID()}
             </p>
             <p id='dropdown' onClick={toggleFratOr}>
                 Fráteknar bækur {fratOr ? "↓" : "→"} <br></br>
