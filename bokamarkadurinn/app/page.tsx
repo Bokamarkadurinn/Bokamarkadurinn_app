@@ -1,42 +1,19 @@
 "use client"
-import './forsida.css';
-import React, { useState } from 'react';
-import Link from 'next/link';
+import Card from '@/app/ui/card';
 
-export default function Page() {
-    return (
-        <main id="forsida">
-          <title>Bókamarkaðurinn</title>
-            <h1 id="head">Bókamarkaðurinn</h1>
-            <nav className="menu-nav">
-          <ul>
-                <li>
-                  <Link href="/staerdfraedi">
-                    <button>Stærfræði</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/islenska">
-                    <button>Íslenska</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/enska">
-                    <button>Enska</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/danska">
-                    <button>Danska</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/annad">
-                    <button>Annað</button>
-                  </Link>
-                </li>
-              </ul>
-          </nav>
-        </main>
-    );
+
+export default function Home() {
+  // Dummy data for the card
+  const cardData = {
+    imageUrl: 'https://via.placeholder.com/300',
+    title: 'Sample Title',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  };
+
+  return (
+    <main>
+      <Card/>
+    </main>
+  );
 }
+
