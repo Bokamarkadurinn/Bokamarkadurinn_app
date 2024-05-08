@@ -106,7 +106,7 @@ const handleFilterTypeChange = (type: string) => {
 
   // Return JSX for rendering
   return (
-    <div id="eventList" className="card-container">
+    <main>
       {/* Filter controls */}
       <div className="filter-controls">
         <input type="text" placeholder="Search" value={searchQuery} onChange={handleSearchInputChange} />
@@ -121,7 +121,7 @@ const handleFilterTypeChange = (type: string) => {
           {/* Add more buttons for additional filters */}
         </div>
       </div>
-  
+      <div id="eventList" className="card-container">
       {/* Event cards */}
       {filteredEvents.map(event => (
         <div className="event-card" key={event.id} onClick={() => displayModal(event)}>
@@ -132,7 +132,7 @@ const handleFilterTypeChange = (type: string) => {
             <div className="card-text">
               <h2>{event.nafn}</h2>
               <p>Dags: {event.dagsetning}</p>
-              <p>Verd: {event.verd}</p>
+              <p>Verð: {event.verd}</p>
             </div>
           </div>
         </div>
@@ -192,6 +192,7 @@ const handleFilterTypeChange = (type: string) => {
         // Add your CSS styles here
       `}</style>
     </div>
+    </main>
   );
 };
 
