@@ -1,33 +1,25 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: red;
 }
-#innskraning {
+#nyskraning {
     text-align: center;
     font-weight: bold;
     font-size: 200%;
+    color: white;
+}
+#uname, #psw, #cpsw, #email{
+    color: white;
 }
 #container {
     padding: 16px;
-}
-#forgot {
-    color: rgb(44, 108, 237);
-    float: right;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 a {
     text-decoration: underline;
 }
 
-#adgang {
-    padding-top: 1em;
-    text-align: center;
-    color: rgb(44, 108, 237);
-}
-
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -57,11 +49,4 @@ button:hover {
 }
 button:active {
     transform: scale(1.025);
-}
-
-@media screen and (max-width: 300px) {
-    #forgot {
-        display: block;
-        float: none;
-    }
 }
