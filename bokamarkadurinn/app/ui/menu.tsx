@@ -1,4 +1,5 @@
 "use client"
+import './menu.css';
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -21,8 +22,9 @@ const Menu: React.FC = () => {
     setIsOpen(false); // Close the menu
     setIsAlternateMenuOpen(false);
   };
+  
 
-  return (
+  return (// className={`menu-toggle ${isOpen ? 'open' : 'closed'}`}
     <div className="menu">
       <div className={`menu-toggle ${isOpen ? 'open' : 'closed'}`} onClick={toggleMenu}>
         <div className="bar"></div>
@@ -49,6 +51,11 @@ const Menu: React.FC = () => {
               <li>
                 <Link href="/profill">
                   <button onClick={closeMenu}>Profill</button>
+                </Link>
+              </li>
+              <li>
+                <Link href="/um_okkur">
+                  <button onClick={closeMenu}>Um Okkur</button>
                 </Link>
               </li>
             </ul>
@@ -94,95 +101,6 @@ const Menu: React.FC = () => {
           </div>
         </div>
       )}
-      <style jsx>{`
-  /* Menu */
-  .menu {
-    position: relative;
-  }
-
-  /* Menu Toggle */
-  .menu-toggle {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-  }
-
-  /* Bar */
-  .bar {
-    width: 20px;
-    height: 2px;
-    background-color: white;
-  }
-
-  /* Menu Content */
-  .menu-content {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgb(41, 41, 41);
-    height: 100%;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Menu Navigation */
-  .menu-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu-nav ul li {
-    margin-bottom: 10px;
-  }
-
-  .menu-nav ul li button {
-    background-color: transparent;
-    border: none;
-    border-radius: 20px;
-    width: 200px;
-    padding: 20px;
-    background-color: rgba(128, 0, 128, 0.527);
-    cursor: pointer;
-    font-size: 16px;
-  }
-
-  .menu-nav ul li button:hover {
-    padding: 20px;
-    background-color: rgba(211, 0, 211, 0.801);
-  }
-
-  /* Close Button */
-  .close-button {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    cursor: pointer;
-    font-size: 20px;
-  }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 768px) {
-    .menu-nav ul li button {
-      width: 150px;
-      font-size: 14px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .menu-nav ul li button {
-      width: 120px;
-      font-size: 12px;
-    }
-  }
-`}</style>
-
     </div>
   );
 };
