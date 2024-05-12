@@ -1,15 +1,31 @@
 import './card.css'; // Import CSS styles
 import React, { useState, useEffect } from 'react'; // Import React and its hooks
+import Image from 'next/image';
+import { createClient } from '@supabase/supabase-js';
 
 // Define interface for Event object
 interface Event {
-  id: number;
-  mynd: string;
-  nafn: string;
-  dagsetning: string;
-  verd: number;
-  lysing: string;
-  type: string; // Assuming each event has a "type" property
+  id: number; // ID bókar
+  seller_id: number; // ID seljanda
+  mynd: string; // Mynd af framhlið bókar   !!! Ekki í DB eins og er !!!
+  entered_into: string; // Dagsetning innsetningar
+  name_of_book: string; // Titill bókar
+  name_of_auth: string; // Nafn seljanda
+  price: number; // Verð bókar
+  lysing: string; // Lýsing bókar   !!! Ekki í DB eins og er !!!
+  filter_id: number; // ID námsgreinar
+  // type: string;
+}
+
+// Nær í API key úr local
+async function getAPIKey() {
+  try {
+    const response = await fetch('/apikey.txt');
+    const key = await response.text();
+    return key;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 // Define Card component
@@ -23,19 +39,29 @@ const Card: React.FC = () => {
 
   // Fetch events data on component mount
   useEffect(() => {
-    fetch('/vidburdir.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
+    async function getData() {
+      try {
+
+        const SUPABASE_URL = 'https://qisbrbynjzxmpdhbpyqb.supabase.co/';
+        const SUPABASE_KEY = await getAPIKey();
+
+        const SUPABASE = createClient(SUPABASE_URL, SUPABASE_KEY);
+        const { data, error } = await SUPABASE
+          .from('books')
+          .select('*');
+
+        if (error) {
+          console.error(error);
+        } else {
+          console.log(data);
+          setEvents(data);
         }
-        return response.json();
-      })
-      .then(data => {
-        setEvents(data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    getData();
   }, []);
 
   // Display modal for selected event
@@ -66,20 +92,20 @@ const Card: React.FC = () => {
   };
 
 // Handle filter type change
-const handleFilterTypeChange = (type: string) => {
+const handleFilterTypeChange = (filter_id: string) => {
   // If the clicked filter is already active, deselect it
-  if (filterTypes.includes(type)) {
+  if (filterTypes.includes(filter_id)) {
     setFilterTypes([]);
   } else {
     // Deselect all filters and activate the clicked one
-    setFilterTypes([type]);
+    setFilterTypes([filter_id]);
   }
 
   // Toggle active class for all filter buttons
   const buttons = document.querySelectorAll('.filter-buttons button');
   buttons.forEach(button => {
-    if (button.textContent === type) {
-      button.classList.toggle('active', filterTypes.includes(type)); // Add or remove 'active' class based on filterTypes
+    if (button.textContent === filter_id) {
+      button.classList.toggle('active', filterTypes.includes(filter_id)); // Add or remove 'active' class based on filterTypes
     } else {
       button.classList.remove('active');
     }
@@ -94,11 +120,11 @@ const handleFilterTypeChange = (type: string) => {
   // Filter events based on selected filter types and search query
   const filteredEvents = events.filter(event => {
     // Check if event matches any filter type
-    if (filterTypes.length > 0 && !filterTypes.includes(event.type)) {
+    if (filterTypes.length > 0 && !filterTypes.includes(event.filter_id)) {
       return false;
     }
     // Check if event matches search query
-    if (searchQuery && !event.nafn.toLowerCase().includes(searchQuery.toLowerCase())) {
+    if (searchQuery && !event.name_of_book.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
     }
     return true;
@@ -127,12 +153,12 @@ const handleFilterTypeChange = (type: string) => {
         <div className="event-card" key={event.id} onClick={() => displayModal(event)}>
           <div className="card-content">
             <div className="card-image">
-              <img src={event.mynd} alt={event.nafn} />
+              <Image src={event.mynd} alt={event.name_of_book} />
             </div>
             <div className="card-text">
-              <h2>{event.nafn}</h2>
-              <p>Dags: {event.dagsetning}</p>
-              <p>Verð: {event.verd}</p>
+              <h2>{event.name_of_book}</h2>
+              <p>Dags: {new Date(event.entered_into).toLocaleDateString()}</p>
+              <p>Verð: {event.price} kr.</p>
             </div>
           </div>
         </div>
@@ -145,13 +171,13 @@ const handleFilterTypeChange = (type: string) => {
             <span className="close" onClick={closeModal}>×</span>
             <div className="modal-content-inner">
               <div className="modal-image">
-                <img src={selectedEvent.mynd} alt={selectedEvent.nafn} />
+                <img src={selectedEvent.mynd} alt={selectedEvent.name_of_book} />
               </div>
               <div className="modal-text">
-                <h2>{selectedEvent.nafn}</h2>
-                <p>Date: {selectedEvent.dagsetning}</p>
-                <p>Price: {selectedEvent.verd}</p>
-                <p>Description: {selectedEvent.lysing}</p>
+                <h2>{selectedEvent.name_of_book}</h2>
+                <p>Dagsetning: {new Date(selectedEvent.entered_into).toLocaleDateString()}</p>
+                <p>Verð: {selectedEvent.price}</p>
+                <p>Lýsing: {selectedEvent.lysing}</p>
                 <button className="buy-button" onClick={handleBuyClick}>Frátaka</button>
               </div>
             </div>
