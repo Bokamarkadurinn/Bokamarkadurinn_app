@@ -9,6 +9,10 @@ Starfsmaður eða admin mun geta fjarlægt bækur, bætt við bókum, breytt upp
 
 ![image](https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/assets/59865041/5e70eefe-1abb-48cb-8aa3-68ecc6f4b9aa)
 
+
+https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/assets/59865041/dbe6a33f-c0b6-4b64-89ed-d880072cbc47
+
+
 figma link: https://www.figma.com/file/XjIk8VQhPTBHwDRvy1k6PC/Bokamarkadurinn?type=design&node-id=0%3A1&mode=design&t=L9jvGnTZZtsmv5ZS-1
 
 ## Wireframe
