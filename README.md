@@ -4,7 +4,7 @@ Síða þessi er hönnuð sem vefapp fyrir skiptibókamarkað fyrir nemendur. Hu
 
 Ætlunin er að nemendaráð skóla skuli sjá um og viðhalda markaðnum. Kerfið býður því upp á mikið hagræði fyrir nemendur, þar sem þeir finna allar námsbækur sínar á einum stað og á sanngjörnu verði. Einnig gætir þetta fjárhagslegra hagsmuna nemenda, þar sem þeir fá meira fyrir hverja sölu á bók en t.d. á skiptibókamarkaði A4.
 
-Starfsmaður eða admin mun geta fjarlægt bækur, bætt við bókum og séð hluti sem venjulegir notendur sjá ekki 
+Starfsmaður eða admin mun geta fjarlægt bækur, bætt við bókum og séð hluti sem venjulegir notendur sjá ekki. Starfsmaðurinn sér um mótöku og sölu bóka, og gæti svarað spurningum um vefsíðu og hjálpað ef vandamál koma upp um bækurnar.
 
 figma link: https://www.figma.com/file/XjIk8VQhPTBHwDRvy1k6PC/Bokamarkadurinn?type=design&node-id=0%3A1&mode=design&t=L9jvGnTZZtsmv5ZS-1
 
