@@ -15,8 +15,8 @@ https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/assets/59865041/dbe6a33f-
 
 Admin video
 
-https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/assets/59865041/bd604d73-332d-42c8-85df-f9b391402b0b
 
+https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/assets/59865041/b2e4b6d9-c030-4e11-a0ea-3fdc0bfa964d
 
 
 figma link: https://www.figma.com/file/XjIk8VQhPTBHwDRvy1k6PC/Bokamarkadurinn?type=design&node-id=0%3A1&mode=design&t=L9jvGnTZZtsmv5ZS-1
