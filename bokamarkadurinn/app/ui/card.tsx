@@ -92,7 +92,7 @@ const Card: React.FC = () => {
   };
 
 // Handle filter type change
-const handleFilterTypeChange = (filter_id: string) => {
+const handleFilterTypeChange = (filter_id: number) => {
   // If the clicked filter is already active, deselect it
   if (filterTypes.includes(filter_id)) {
     setFilterTypes([]);
@@ -138,12 +138,12 @@ const handleFilterTypeChange = (filter_id: string) => {
         <input type="text" placeholder="Search" value={searchQuery} onChange={handleSearchInputChange} />
         {/* Buttons for filter types */}
         <div className="filter-buttons">
-          <button onClick={() => handleFilterTypeChange("Filter 1")}>Stærfræði</button>
-          <button onClick={() => handleFilterTypeChange("Filter 2")}>Íslenska</button>
-          <button onClick={() => handleFilterTypeChange("Filter 3")}>Enska</button>
-          <button onClick={() => handleFilterTypeChange("Filter 4")}>Danska</button>
+          <button onClick={() => handleFilterTypeChange(2)}>Stærfræði</button>
+          <button onClick={() => handleFilterTypeChange(3)}>Íslenska</button>
+          <button onClick={() => handleFilterTypeChange(1)}>Enska</button>
+          <button onClick={() => handleFilterTypeChange(4)}>Danska</button>
          {/* Þarf að fara yfir getur ekki verið takki 
-         verður að vera drop down sennilega */} <button onClick={() => handleFilterTypeChange("Filter 5")}>Annað</button>
+         verður að vera drop down sennilega */} <button onClick={() => handleFilterTypeChange(5)}>Annað</button>
           {/* Add more buttons for additional filters */}
         </div>
       </div>
