@@ -3,7 +3,6 @@ import './menu.css';
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-
 const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);//setIsopen = toggle state
   const [isAlternateMenuOpen, setIsAlternateMenuOpen] = useState(false);
@@ -24,7 +23,7 @@ const Menu: React.FC = () => {
   };
   
 
-  return (// className={`menu-toggle ${isOpen ? 'open' : 'closed'}`}
+  return (
     <div className="menu">
       <div className={`menu-toggle ${isOpen ? 'open' : 'closed'}`} onClick={toggleMenu}>
         <div className="bar"></div>
