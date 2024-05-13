@@ -23,3 +23,18 @@ body {
     font-size: 20px;
     padding-bottom: 5px;
 }
+.button {
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+    padding: 20px;
+    background-color: orange;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    padding: 20px;
+    background-color:rgb(224, 146, 0);
+}

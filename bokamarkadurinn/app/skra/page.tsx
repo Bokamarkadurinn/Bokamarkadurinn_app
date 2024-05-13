@@ -18,8 +18,8 @@ export default function Page() {
 
   return (
     <main>
-      <title>Nýskráning</title>
-      <h1 id="nyskraning">Nýskráning</h1>
+      <title>Skrá</title>
+      <h1 id="nyskraning">Skrá bók</h1>
 
       <div id="container">
         {/* Form for user input */}
