@@ -51,14 +51,14 @@
     border-radius: 20px;
     width: 200px;
     padding: 20px;
-    background-color: rgba(128, 0, 128, 0.527);
+    background-color: orange;
     cursor: pointer;
     font-size: 16px;
 }
 
 .menu-nav ul li button:hover {
     padding: 20px;
-    background-color: rgba(211, 0, 211, 0.801);
+    background-color:rgb(224, 146, 0);
 }
 
 /* Close Button */
