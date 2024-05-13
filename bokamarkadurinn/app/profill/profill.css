@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+#mynd {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+#nafn {
+    padding-top: 20px;
+    font-size: 50px;
+}
+#identity {
+    font-size: 35px;
+}
+#dropdown {
+    cursor: pointer;
+    padding-top: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+}

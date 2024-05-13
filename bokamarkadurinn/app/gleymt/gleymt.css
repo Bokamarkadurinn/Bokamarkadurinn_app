@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+#gleymt {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    color: white;
+}
+#container {
+    padding: 16px;
+}
+#email {
+    color: white;
+}
+input, button {
+    border-radius: 10px;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: black;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.125);
+}
+button:active {
+    transform: scale(1.025);
+}

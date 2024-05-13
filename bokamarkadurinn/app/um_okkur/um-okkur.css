@@ -1,3 +1,6 @@
+body {
+    color: white;
+}
 #head {
     text-align: center;
     font-weight: bold;
@@ -15,7 +18,7 @@
     .texti head {
     width: 90%;
     padding: 10%;
-    font-size: 200%;
+    font-size: 150%;
 }
 }
 
@@ -23,6 +26,6 @@
 .texti head {
 width: 90%;
 padding: 8%;
-font-size: 200%;
+font-size: 100%;
 }
 }
