@@ -46,9 +46,6 @@ const Menu: React.FC = () => {
                 </Link>
               </li>
               <li>
-                  <button onClick={toggleAlternateMenu}>Námsgrein</button>
-              </li>
-              <li>
                 <Link href="/profill">
                   <button onClick={closeMenu}>Profill</button>
                 </Link>
@@ -65,43 +62,7 @@ const Menu: React.FC = () => {
           </div>
         </div>
       )}
-       {isAlternateMenuOpen && (
-        <div className="menu-content">
-          <nav className="menu-nav">
-          <ul>
-                <li>
-                  <Link href="/namsgrein/staerdfraedi">
-                    <button onClick={closeMenu}>Stærfræði</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/namsgrein/islenska">
-                    <button onClick={closeMenu}>Íslenska</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/namsgrein/enska">
-                    <button onClick={closeMenu}>Enska</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/namsgrein/danska">
-                    <button onClick={closeMenu}>Danska</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/namsgrein/annad">
-                    <button onClick={closeMenu}>Annað</button>
-                  </Link>
-                </li>
-              </ul>
-          </nav>
-          <div className="close-button" onClick={closeMenu}>
-            X
-          </div>
         </div>
-      )}
-    </div>
   );
 };
 
