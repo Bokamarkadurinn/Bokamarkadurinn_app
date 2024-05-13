@@ -41,7 +41,7 @@ input, button {
 }
 
 button {
-    background-color: black;
+    background-color: orange;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -54,8 +54,7 @@ button {
 }
 
 button:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(224, 146, 0);
     transform: scale(1.125);
 }
 button:active {
