@@ -6,6 +6,8 @@ Síða þessi er hönnuð sem vefapp fyrir skiptibókamarkað fyrir nemendur. Hu
 
 Starfsmaður eða admin mun geta fjarlægt bækur, bætt við bókum, breytt upplýsingum um þær og séð hluti sem venjulegir notendur sjá ekki. Starfsmaðurinn sér einnig um mótöku og sölu bóka, auk þess að gæta vöruflæðis og halda utan um viðskiptavinina. Ef vandamál koma upp um bækurnar, getur starfsmaðurinn svarað spurningum og veitt hjálp.
 
+Hýsing: https://bokamarkadurinn-qoldv8842-chris-projects-31bef599.vercel.app/
+
 Figma teikning:
 ![image](https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/assets/59865041/5e70eefe-1abb-48cb-8aa3-68ecc6f4b9aa)
 
