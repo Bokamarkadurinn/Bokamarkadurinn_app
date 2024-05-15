@@ -43,7 +43,11 @@ const Card: React.FC = () => {
       try {
 
         const SUPABASE_URL = 'https://qisbrbynjzxmpdhbpyqb.supabase.co/';
-        const SUPABASE_KEY = await getAPIKey();
+        let SUPABASE_KEY = await getAPIKey();
+
+        if (SUPABASE_KEY == undefined) {
+          SUPABASE_KEY = "";
+        }
 
         const SUPABASE = createClient(SUPABASE_URL, SUPABASE_KEY);
         const { data, error } = await SUPABASE
