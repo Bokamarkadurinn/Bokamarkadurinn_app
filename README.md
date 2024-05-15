@@ -29,3 +29,8 @@ figma link: https://www.figma.com/file/XjIk8VQhPTBHwDRvy1k6PC/Bokamarkadurinn?ty
 ## Wireframe
 
 ![Wireframe](https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/blob/main/myndir/Wireframe.jpg?raw=true)
+
+## visual postgres schema
+
+![visual schema](https://github.com/Bokamarkadurinn/Bokamarkadurinn_app/assets/146173618/764856b6-3372-45ec-b2dc-e3c996d661d3)
+
