@@ -98,18 +98,18 @@ const Card: React.FC = () => {
 // Handle filter type change
 const handleFilterTypeChange = (filter_id: number) => {
   // If the clicked filter is already active, deselect it
-  if (filterTypes.includes(filter_id)) {
+  if (filterTypes.includes(filter_id.toString())) {
     setFilterTypes([]);
   } else {
     // Deselect all filters and activate the clicked one
-    setFilterTypes([filter_id]);
+    setFilterTypes([filter_id.toString()]);
   }
 
   // Toggle active class for all filter buttons
   const buttons = document.querySelectorAll('.filter-buttons button');
   buttons.forEach(button => {
-    if (button.textContent === filter_id) {
-      button.classList.toggle('active', filterTypes.includes(filter_id)); // Add or remove 'active' class based on filterTypes
+    if (button.textContent === filter_id.toString()) {
+      button.classList.toggle('active', filterTypes.includes(filter_id.toString())); // Add or remove 'active' class based on filterTypes
     } else {
       button.classList.remove('active');
     }
@@ -124,7 +124,7 @@ const handleFilterTypeChange = (filter_id: number) => {
   // Filter events based on selected filter types and search query
   const filteredEvents = events.filter(event => {
     // Check if event matches any filter type
-    if (filterTypes.length > 0 && !filterTypes.includes(event.filter_id)) {
+    if (filterTypes.length > 0 && !filterTypes.includes(event.filter_id.toString())) {
       return false;
     }
     // Check if event matches search query
